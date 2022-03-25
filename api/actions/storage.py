@@ -46,7 +46,7 @@ def add(item, request: Request):
             raise Exception("Error al agregar el item: {}".format(str(e)))
         raise e
 
-def update( item_id, item, request ):
+def update( item_id, item, request: Request ):
     """ Actualiza un item en la lista
     
         :param item_id: ID del item a actualizar
@@ -126,7 +126,7 @@ def get_all(modelo, pagina=1, cantidad=10, request=Request, order_by="ID", sort=
             raise Exception(f"Error al obtener todos los items:",e)
         raise e
 
-def get_by_id(modelo,item_id,request):
+def get_by_id( modelo, item_id, request: Request ):
     """ Retorna un item por su ID
     
         :param item_id: ID del item a retornar
@@ -159,7 +159,7 @@ def get_by_id(modelo,item_id,request):
         raise e
 
 
-def delete(modelo, item_id, request):
+def delete( modelo, item_id, request:Request ):
     """ Elimina un item de la lista
     
         :param item_id: ID del item a eliminar
