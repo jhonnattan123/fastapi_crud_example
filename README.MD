@@ -16,6 +16,13 @@ python3.9 -m uvicorn app:app --reload
 
 Then try to visit `http://localhost:8000/docs` or `http://localhost:8000/redoc` to see the documentation.
 
+Running on Docker
+---------------
+
+```docker
+docker pull 4311094/fastapi_crud_example:v3
+docker run -it -d -p 8000:8000 fastapi_crud_example_api
+```
 Environment variables
 ---------------
 

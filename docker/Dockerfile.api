@@ -1,0 +1,33 @@
+#
+# NOTE: THIS DOCKERFILE IS GENERATED VIA "apply-templates.sh"
+#
+# PLEASE DO NOT EDIT IT DIRECTLY.
+#
+
+FROM python:3.9.6
+
+# Install build dependencies.
+RUN apt-get update \
+ && apt-get install --no-install-recommends --assume-yes build-essential \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+# Change workdir to app.
+WORKDIR ./app
+
+# Install app dependencies.
+COPY requirements.txt ./requirements.txt
+RUN pip install --upgrade pip --no-cache-dir \
+ && pip install -r ./requirements.txt --no-cache-dir
+
+# Copy app files.
+COPY api ./api
+COPY app.py ./app.py
+COPY app.sh ./app.sh
+COPY VERSION ./VERSION
+
+# add permissions
+RUN chmod +x ./app.sh
+
+# Run the application.
+CMD ["./app.sh"]
