@@ -21,7 +21,7 @@ def create_app() -> FastAPI:
         return app
     
     except Exception as e:
-        raise Exception(f"Error al crear la aplicación: {str(e)}")
+        raise Exception("Error al crear la aplicación: " + str(e))
 
 def obtener_routers( app: FastAPI ) -> None:
     """ Importa los routers de los módulos y los registra en la aplicación.
