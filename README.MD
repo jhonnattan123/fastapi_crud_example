@@ -6,12 +6,12 @@ Running locally
 
 install dependencies
 ```bash
-pip install -r requirements.txt
+python3.9 -m pip install -r requirements.txt
 ```
 To run locally, use the following commands:
 
 ```bash
-uvicorn app:app --reload
+python3.9 -m uvicorn app:app --reload
 ```
 
 Then try to visit `http://localhost:8000/docs` or `http://localhost:8000/redoc` to see the documentation.

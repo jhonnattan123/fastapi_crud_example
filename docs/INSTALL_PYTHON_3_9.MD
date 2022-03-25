@@ -18,12 +18,14 @@ sudo wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
 ```
 Next, extract the downloaded archive file and prepare the source for the installation.
 ```sh
-tar xzf Python-3.9.6.tgz 
+sudo tar xzf Python-3.9.6.tgz 
 cd Python-3.9.6 
 sudo ./configure --enable-optimizations 
 ```
 Python source is ready to install. Execute make altinstall command to install Python 3.9 on your system.
+```sh	
 sudo make altinstall 
+```
 make altinstall is used to prevent replacing the default python binary file /usr/bin/python.
 
 The Python 3.9 has been installed on Ubuntu 18.04 system. Verify the installed version:
@@ -35,4 +37,5 @@ Remove the downloaded archive to free space
 sudo rm -f /opt/Python-3.9.6.tgz 
 ```
 
+source:
 https://tecadmin.net/how-to-install-python-3-9-on-ubuntu-18-04/
