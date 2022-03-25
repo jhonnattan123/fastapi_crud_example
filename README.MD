@@ -23,6 +23,7 @@ python3.9 -m uvicorn app:app --reload
 ```
 
 Then try to visit `http://localhost:8000/docs` or `http://localhost:8000/redoc` to see the documentation.
+you can use the UI to run API tests and check its operation.
 
 Running on Docker
 ---------------
