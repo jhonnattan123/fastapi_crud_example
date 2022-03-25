@@ -46,4 +46,7 @@ class Usuario(BaseModel):
     )
 
     def u_key(self):
+        """ Entrega la llave unica para el modelo Usuario
+        """
+        
         return "email" 

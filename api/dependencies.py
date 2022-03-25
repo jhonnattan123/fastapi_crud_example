@@ -3,7 +3,7 @@ import datetime
 from fastapi import Header, HTTPException
 
 def oapi_code_response( description: str, schema: dict, examples: dict ) -> dict:
-    """Genera un diccionario con el código de respuesta de OpenAPI
+    """ Genera un diccionario con el código de respuesta de OpenAPI
 
     :param description: Descripción del código de respuesta
     :param schema: Diccionario con el esquema de respuesta

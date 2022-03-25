@@ -1,6 +1,12 @@
 from pydantic import BaseModel, Field
 
 def Respuesta_Listar(clase=False):
+    """ Clase que representa la la estructura para la respuesta de listar
+        si se pasa una clase, se genera un modelo para la clase
+        el modelo se utiliza en documentacion de la API 
+        
+    :param clase: Clase a generar el modelo
+    """
 
     class Respuesta_Listar:
         def __init__(self):
@@ -10,6 +16,7 @@ def Respuesta_Listar(clase=False):
 
     if clase:
         class Respuesta_Listar(BaseModel):
+            
             data: list[clase] = Field(
                 title="Total de items"
             )
@@ -26,4 +33,5 @@ def Respuesta_Listar(clase=False):
             )
 
         return Respuesta_Listar
+    
     return Respuesta_Listar()

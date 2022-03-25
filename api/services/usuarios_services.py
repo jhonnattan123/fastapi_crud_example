@@ -62,7 +62,9 @@ class Usuarios_Services:
     def editar_usuario(self, usuario_id: UUID, usuario: Usuario, request: Request) -> dict:
         """ Edita un usuario de la base de datos.
 
+        :param usuario_id: ID del usuario a editar
         :param usuario: Usuario a editar
+        :param request: Request de FastAPI
         """
         try:
                 

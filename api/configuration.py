@@ -9,6 +9,8 @@ class BaseConfig(BaseModel):
         API_NAME (str): Nombre de la API.
         API_PREFIX (str): Prefijo de la API.
         VERSION (str): Versión de la API.
+        OPENAPI_URL (str): URL de la documentación de la API.
+        BASE_DIR (str): Directorio base de la API.
     """
     config = {
         **dotenv_values(".env"),
