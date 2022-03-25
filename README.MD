@@ -56,5 +56,5 @@ Please make sure to update tests as appropriate.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## TO DO
-[] UML Diagrams
-[] Unitests
+- [ ] UML Diagrams
+- [ ] Unitests
