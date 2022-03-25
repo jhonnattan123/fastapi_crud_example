@@ -1,6 +1,14 @@
 README
 ======
 
+The present repository contains a mini CRUD project using the FastApi python framework.
+
+the crud is focused on user management.
+the system will store all the users in memory, no database is used, because it is intended to demonstrate the operation of a CRUD. however the file in charge of controlling the storage of users in memory; storage.py can be replaced by a database connector and thus, make the system work.
+
+the system validates the user's schema, validates that the email is unique, validates the format of the date of birth and validates the age.
+
+
 Running locally
 ---------------
 
